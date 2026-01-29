@@ -1,0 +1,172 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos de la parte principal */
+.tituloInicio {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blueviolet;
+    font-size: 4.5rem;
+}
+
+.subtitulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(202, 202, 211);
+    font-size: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background: linear-gradient(to top, transparent 0%, black 100%);
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.idioma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bloqueInicio {
+    display: flex;
+    width: 100%;
+    height: 1%;
+    align-items: end;
+    padding: 4rem 2rem;
+    flex-grow: 1;
+}
+
+.bloques {
+    display: block
+}
+
+.primerBloque {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    height: 100vh;
+    background-image: url(/Imagenes/Jiafei.webp);
+}
+
+.segundoBloque {
+    display: flex;
+    flex-direction: row;
+    padding: 6rem 6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.imagenPerfil {
+    width: 45rem;
+    height: 45rem;
+    object-fit: cover;
+}
+
+.perfilProfesional {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.tituloPerfil {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blueviolet;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.parrafoPerfil {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(10, 10, 99);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.bloquecitos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.bloquecito {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Estilos del botón con efecto */
+.btn-architecture {
+  position: relative;
+  display: inline-block;
+
+  padding: clamp(18px, 2.5vw, 30px) clamp(42px, 6vw, 90px);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(13px, 1.1vw, 18px);
+  letter-spacing: clamp(2px, 0.35vw, 5px);
+
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+
+  border: clamp(1.5px, 0.15vw, 2.5px) solid #111;
+  background: transparent;
+  overflow: hidden;
+
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.btn-architecture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,0,0,0.18),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.btn-architecture::after {
+  content: "";
+  position: absolute;
+  inset: clamp(6px, 0.6vw, 14px);
+  border: 1px solid rgba(0,0,0,0.35);
+  transition: inset 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-architecture:hover {
+  color: #fff;
+  background-color: #111;
+}
+
+.btn-architecture:hover::before {
+  left: 120%;
+}
+
+.btn-architecture:hover::after {
+  inset: clamp(10px, 1vw, 20px);
+  border-color: rgba(255,255,255,0.4);
+}
